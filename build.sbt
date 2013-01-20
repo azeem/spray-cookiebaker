@@ -16,7 +16,8 @@ libraryDependencies ++= Seq(
   "io.spray"            %   "spray-routing" % "1.1-M6",
   "io.spray"            %   "spray-testkit" % "1.1-M6",
   "com.typesafe.akka"   %%  "akka-actor"    % "2.1.0-RC3"          cross CrossVersion.full,
-  "org.specs2"          %%  "specs2"        % "1.12.3"    % "test" cross CrossVersion.full
+  "org.specs2"          %%  "specs2"        % "1.12.3"    % "test" cross CrossVersion.full,
+  "commons-codec"       %   "commons-codec" % "1.7"
 )
 
 seq(Revolver.settings: _*)
