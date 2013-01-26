@@ -152,6 +152,11 @@ case class Session(data: Map[String, String] = Map.empty[String, String]) {
   def get(key: String) = data.get(key)
 
   /**
+   * Retruns true if the session has the given key.
+   */
+  def contains(key: String) = data.contains(key)
+
+  /**
    * Returns `true` if this session is empty.
    */
   def isEmpty: Boolean = data.isEmpty

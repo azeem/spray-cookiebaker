@@ -1,12 +1,11 @@
 package com.example
 
 import akka.actor.Actor
-import sessionutils.{SessionDirectives, Session}
+import in.azeemarshad.common.sessionutils.SessionDirectives
+import sessionutils.Session
 import spray.routing._
 import spray.http._
 import MediaTypes._
-import com.typesafe.config.ConfigFactory
-import com.example.sessionutils.SessionDirectives._
 
 
 // we don't implement our route structure directly in the service actor because
@@ -25,7 +24,7 @@ class MyServiceActor extends Actor with MyService {
 
 
 // this trait defines our service behavior independently from the service actor
-trait MyService extends HttpService {
+trait MyService extends HttpService with SessionDirectives {
   val myRoute =
     (path("clear") & get & respondWithMediaType(`text/html`) & clearSession) {
       complete {
@@ -46,7 +45,7 @@ trait MyService extends HttpService {
       }
     } ~
     (path("get") & get & respondWithMediaType(`text/html`)) {
-      SessionDirectives.session { sessionData:Session =>
+      session { sessionData:Session =>
         complete {
           <html>
             <body>
