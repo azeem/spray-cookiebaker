@@ -1,12 +1,12 @@
 package com.example
 
 import akka.actor.Actor
-import session.{SessionDirectives, Session}
+import sessionutils.{SessionDirectives, Session}
 import spray.routing._
 import spray.http._
 import MediaTypes._
 import com.typesafe.config.ConfigFactory
-import com.example.session.SessionDirectives._
+import com.example.sessionutils.SessionDirectives._
 
 
 // we don't implement our route structure directly in the service actor because

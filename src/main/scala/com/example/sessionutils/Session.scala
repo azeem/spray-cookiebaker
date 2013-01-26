@@ -1,4 +1,4 @@
-package com.example.session
+package com.example.sessionutils
 
 import spray.http.HttpCookie
 import com.typesafe.config.ConfigFactory

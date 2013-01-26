@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
-package com.example.session
+package com.example.sessionutils
 
 import javax.crypto._
 import javax.crypto.spec.SecretKeySpec

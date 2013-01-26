@@ -1,4 +1,4 @@
-package com.example.session
+package com.example.sessionutils
 
 import shapeless._
 import spray.routing._
